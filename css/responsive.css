@@ -1,0 +1,104 @@
+/* evita scroll lateral */
+html, body { overflow-x: hidden; }
+
+/* TABLET/MOBILE */
+@media (max-width: 900px){
+
+  .hero, .home, .inicio, .section-hero{
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .hero{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    align-items: start !important;
+    justify-items: start !important;
+    align-content: start;           /* centraliza vertical no grid */
+    padding: 0 !important;           /* remove espaço extra */
+    gap: 16px !important;
+  }
+  .hero-right,
+  .hero-left{
+    justify-self: start !important;
+  }
+  .hero-right{
+    order: 0 !important;
+    width: 100%;
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+
+  .hero-left{
+    order: 1 !important;
+    width: 100%;
+    margin-top: 6px !important;
+  }
+
+  .avatar-frame,
+  .avatar-wrap{
+    margin: 0 auto !important;
+  }
+
+  .avatar-wrap{
+    width: min(280px, 84vw) !important;
+    height: auto !important;
+    aspect-ratio: 1/1 !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+  }
+
+  /* AQUI é o principal: mobile SEM translateY antigo */
+  .avatar{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transform: translateY(-120px) scale(1.30) ; 
+    transition: none !important;
+  }
+
+  /* chips */
+  .chip{
+    font-size: 11px !important;
+    padding: 7px 10px !important;
+    max-width: 58vw !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+  .chip-top{ top: 10% !important; left: 10% !important; }
+  .chip-right{ top: 35% !important; right: 10% !important; }
+@media (max-width: 900px){
+  .chip-bottom{
+    bottom: 38% !important;  /* sobe ele */
+    left: 15% !important;    /* puxa mais pra dentro */
+  }
+}
+  /* textos */
+  .hero-kicker{ font-size: 15px !important; }
+  .hero-title{
+    font-size: clamp(30px, 9vw, 44px) !important;
+    line-height: 1.05 !important;
+    margin: 6px 0 !important;
+  }
+  .hero-role{ font-size: 17px !important; margin-bottom: 10px !important; }
+  .hero-desc{ font-size: 14px !important; line-height: 1.7 !important; }
+
+  .hero-cta{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-top: 14px !important;
+  }
+}
+
+/* MOBILE PEQUENO */
+@media (max-width: 480px){
+  .avatar-wrap{
+    width: min(260px, 92vw) !important;
+  }
+  .chip{
+    font-size: 10.5px !important;
+    padding: 7px 9px !important;
+  }
+}

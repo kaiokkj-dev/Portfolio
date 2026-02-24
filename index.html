@@ -4,15 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaio Henrique | Portfólio</title>
-
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="css/style.css" />
-
+  <!-- Css -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/projetos.css">
+  <link rel="stylesheet" href="css/sobre.css">
+  <link rel="stylesheet" href="css/tech.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <!-- Devicon -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
-
 <body>
   <header class="header">
     <div class="header-inner">
@@ -28,12 +31,36 @@
   <main class="container">
 
     <!-- HERO -->
-    <section class="hero">
-      <h2>Desenvolvimento em formação</h2>
-      <p>Buscando estágio para criar interfaces modernas e funcionais.</p>
-      <a href="#projetos" class="btn">Ver Projetos</a>
+<section class="hero" id="home">
+  <div class="hero-left">
+    <p class="hero-kicker">Olá, eu sou</p>
+    <h1 class="hero-title">
+      <span>Kaio Henrique</span>
+    </h1>
+        <p class="hero-role">Frontend Engineer</p>
+        <p class="hero-desc">Desenvolvo aplicações web modernas, rápidas e responsivas, unindo performance, experiência do usuário e código limpo para criar produtos digitais eficientes.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#" download>
+        <span class="btn-icon">⬇</span>
+        Resume
+      </a>
+      <span class="badge-available">
+        <span class="dot"></span>
+        Avileble
+      </span>
+    </div>
+  </div>
+<div class="hero right">
+  <div class="avatar-frame">
+    <div class="avatar-wrap">
+      <img class="avatar" src="img/profile.jpg" alt="Foto de Perfil">
+    </div>
+    <span class="chip chip-top">user-focused</span>
+    <span class="chip chip-right">problem solver</span>
+    <span class="chip chip-bottom">clean UI</span>
+  </div>
+</div>
     </section>
-
     <!-- PROJETOS -->
     <section id="projetos" class="projetos">
       <h2>Meus Projetos</h2>
@@ -57,42 +84,40 @@
 
           <div class="divider"></div>
 
+          <div class="divider"></div>
           <div class="actions">
-            <a href="#" class="link" target="_blank" rel="noreferrer">Demo</a>
-            <a href="#" class="link outline" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="#" class="btn-sweep" target="_blank" rel="noreferrer"><span>Demo ↗</span>
+            </a>
+            <a href="#" class="btn-sweep outline" target="_blank" rel="noreferrer"><span>GitHub ↗</span>
+            </a>
           </div>
         </article>
-
         <article class="card">
-          <img src="img/projeto6.png" alt="Preview do Projeto Lista de Tarefas" class="card-img" />
+          <img src="img/projeto6.png" alt="Preview do Projeto Lista de Tarefas" class="card-img"/>
           <h3>Lista de Tarefas</h3>
           <p>
             Aplicação de lista de tarefas desenvolvida para praticar HTML, CSS e JavaScript,
             com foco em lógica, manipulação do DOM e organização de interface.
           </p>
-
           <div class="tags">
             <span>HTML</span>
             <span>CSS</span>
             <span>JS</span>
           </div>
-
           <div class="divider"></div>
-
           <div class="actions">
-            <a href="#" class="link" target="_blank" rel="noreferrer">Demo</a>
-            <a href="#" class="link outline" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="#" class="btn-sweep" target="_blank" rel="noreferrer"><span>Demo ↗</span>
+            </a>
+            <a href="#" class="btn-sweep outline" target="_blank" rel="noreferrer"><span>GitHub ↗</span>
+            </a>
           </div>
         </article>
-
       </div>
     </section>
-
     <!-- SOBRE -->
     <section class="sobre" id="sobre">
       <div class="sobre-wrapper">
         <h2>Sobre</h2>
-
         <p class="about-text">
           Sou Desenvolvedor Front-End focado em transformar ideias em experiências digitais modernas e intuitivas.
           Tenho construído projetos utilizando HTML, CSS e JavaScript, aplicando conceitos de responsividade,
@@ -100,7 +125,6 @@
           Busco evoluir constantemente minhas habilidades técnicas enquanto desenvolvo soluções funcionais,
           acessíveis e bem estruturadas, sempre com atenção à experiência do usuário e à performance.
         </p>
-
         <div class="tech-slider">
           <div class="tech-surface">
             <div class="tech-track">
@@ -123,11 +147,8 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
-
   </main>
-
 </body>
 </html>

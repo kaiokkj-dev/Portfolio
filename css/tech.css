@@ -1,0 +1,58 @@
+/* =========================
+TECH SLIDER
+========================= */
+.tech-slider{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.tech-surface{
+    overflow: hidden;
+    width: min(420px, 480px);
+    padding: 18px 26px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, rgba(16,24,22,0.95), rgba(11,15,14,0.95));
+    border: 1px solid rgba(34,197,94,0.22);
+    backdrop-filter: blur(6px);
+    position: relative;
+}
+
+.tech-surface::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(34,197,94,0.08), transparent, rgba(34,197,94,0.06));
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0; 
+}
+
+.tech-track{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+.tech-surface:hover .tech-track{
+    animation-play-state: paused;
+}
+
+.tech-track i{
+    font-size: 34px;
+    margin-right: 56px;
+    color: var(--green);
+    filter: drop-shadow(0 6px 14px rgba(34,197,94,0.25));
+    transition: .2s ease;
+}
+
+.tech-track i:hover{
+    transform: translateY(-4px) scale(1.12);
+    filter: drop-shadow(0 8px 18px rgba(34,197,94,0.45));
+}
+
+@keyframes marquee{
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
